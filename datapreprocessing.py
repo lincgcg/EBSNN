@@ -294,16 +294,15 @@ def _get_dataloader_flow(filename, labels, test_percent, batch_size,
         else:
             f_h5 = h5py.File(f_h5, 'w')
             packet = f.readline()
-            i = 0
             while packet:
-                print(i)
-                i = i + 1
                 data_bytes = packet.split()
                 label, flow_idx, packet_idx = data_bytes[0].split('//')
                 label_numerical = labels[label]
                 flow_path = '/'.join([label, flow_idx])
                 data_bytes = data_bytes[1:]
                 data_bytes_numerical = [byte_to_ix[b.zfill(2)] for b in data_bytes]
+                if '/'.join([flow_path, packet_idx, 'X']) in f_h5:
+                    continue
                 f_h5.create_dataset('/'.join([flow_path, packet_idx, 'X']),
                                     data=np.array(data_bytes_numerical,
                                                   dtype=np.uint8))
