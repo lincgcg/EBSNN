@@ -77,6 +77,10 @@ parser.add_argument('--segment_len', type=int, default=8,
                     help='the length of segment')
 parser.add_argument('--test_cycle', type=int, default=1,
                     help='test cycle')
+parser.add_argument(
+    '--csv_file', type=str, default='csv_file',
+    help='output csv_file')
+
 FLAGS = parser.parse_args()
 
 if __name__ == '__main__':
@@ -242,44 +246,17 @@ if __name__ == '__main__':
                    'accuracy: {}').format(
                        epoch, time() - s_t, train_loss_eval,
                        train_acc_eval, test_loss, test_accuracy))
-            if test_accuracy > best_results['acc']:
+            # if test_accuracy > best_results['acc']
+            if test_accuracy > 0.0:
                 best_results['acc'] = test_accuracy
                 best_results['epoch'] = epoch
                 best_results['results'] = class_reports
                 model_best = model.state_dict(), test_accuracy, epoch
-                # debug
-                # test_loss, test_accuracy, test_results = evaluate_loss_acc(
-                #     model, debug_test_loader, debug_test_loader.alpha, GAMMA,
-                #     NUM_CLASS, DEVICE, test=True, flow=FLOW,
-                #     aggregate=AGGREGATE)
-                # p_log('DEBUG: newtest on original model: ' +
-                #       f'loss: {test_loss}, acc: {test_accuracy}')
-                # save_model_name = './models/best_debug.pt'
-                # torch.save(model_best[0], save_model_name)
-                # del model
-                # p_log(f'load model from {save_model_name}')
-                # model = MODEL(NUM_CLASS, EMBEDDING_DIM, DEVICE,
-                #       segment_len=SEGMENT_LEN,
-                #       bidirectional=BIDIRECTION)
-                # model.load_state_dict(torch.load(save_model_name))
-                # model = model.cuda(DEVICE)
-                # test_loss, test_accuracy, test_results = evaluate_loss_acc(
-                #     model, test_loader, test_loader.alpha, GAMMA,
-                #     NUM_CLASS, DEVICE, test=True, flow=FLOW,
-                #     aggregate=AGGREGATE)
-                # p_log('DEBUG: test on loaded model: ' +
-                #       f'loss: {test_loss}, acc: {test_accuracy}')
-                # test_loss, test_accuracy, test_results = evaluate_loss_acc(
-                #     model, debug_test_loader, debug_test_loader.alpha, GAMMA,
-                #     NUM_CLASS, DEVICE, test=True, flow=FLOW,
-                #     aggregate=AGGREGATE)
-                # p_log('DEBUG: newtest on loaded model: ' +
-                #       f'loss: {test_loss}, acc: {test_accuracy}')
-
-            # early_stopping(1 / test_accuracy, model)
-            # if early_stopping.early_stop:
-            #     print("Early stopping")
-            #     break
+            if (epoch+1) % 1 == 0:
+                report_df = pd.DataFrame(class_reports).transpose()
+                report_df.to_csv(FLAGS.csv_file, index=True)
+            
+            
         else:
             p_log('epoch: {} done ({} s),  train loss: {}'.format(
                   epoch, time() - s_t, train_loss))
