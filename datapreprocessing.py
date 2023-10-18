@@ -296,8 +296,8 @@ def _get_dataloader_flow(filename, labels, test_percent, batch_size,
             packet = f.readline()
             i = 0
             while packet:
-                print(i)
-                i = i + 1
+                # print(i)
+                # i = i + 1
                 data_bytes = packet.split()
                 label, flow_idx, packet_idx = data_bytes[0].split('//')
                 label_numerical = labels[label]
