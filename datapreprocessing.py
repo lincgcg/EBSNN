@@ -289,7 +289,7 @@ def _get_dataloader_flow(filename, labels, test_percent, batch_size,
         f_h5 = os.path.join('data', filename.split('.')[0] + '.hdf5')
         if os.path.isfile(f_h5):
             p_log('hdf5 file already exists, skip creating.')
-            f_h5 = None
+            # f_h5 = None
             f_h5 = h5py.File(f_h5, 'r')
         else:
             f_h5 = h5py.File(f_h5, 'w')
