@@ -1,47 +1,70 @@
 
 
+# 01
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/01/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/01/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/01/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
 
 
-# LSTM 08, 09, 11, 12, 13, 14
+
+
+# 02
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/02/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/02/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/02/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
+
+
+
+
+# 03
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/03/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/03/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/03/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
+
+
+
+
+# 04
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/04/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/04/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/04/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
+
+
+
+
+# 05
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/05/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/05/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/05/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
+
+
+
+
+# 06
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/06/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/06/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/06/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
+
+
+
+
+# 07
+
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/07/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/07/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/07/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
 
 
 
 
 # 08
 
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/08/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/08/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/08/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/08/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/08/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/08/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
 
 
 
 
 # 09
 
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/09/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/09/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/09/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/09/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/09/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/09/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
 
 
 
 
+# 10
 
-# 11
-
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/11/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/11/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/11/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
-
+CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/10/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/17/GRU/DCS/10/log.txt  --model EBSNN_GRU --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/17/GRU/DCS/10/result.csv --labels 'AIM,email-client,facebook,ftps,gmail,hangout,ICQ,netflix,scp,sftp,skype,spotify,vimeo,voipbuster,youtube,Tor,Torrent'
 
 
-
-# 12
-
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/12/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/12/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/12/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
-
-
-
-# 13
-
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/13/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/13/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/13/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
-
-
-
-
-# 14
-
-CUDA_VISIBLE_DEVICES=0 python3 train.py --flow --filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/14/data.traffic --log_filename /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/14/log.txt  --model EBSNN_LSTM --epochs 10 --csv_file /root/autodl-tmp/EBSNN-file/12/LSTM/DCS/14/result.csv --labels 'vpn-P2P,vpn-FT,Chat,vpn-Chat,vpn-Email,Streaming,P2P,VoIP,FT,vpn-VoIP,vpn-Streaming,Email'
